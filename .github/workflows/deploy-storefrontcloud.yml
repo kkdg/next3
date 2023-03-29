@@ -34,7 +34,7 @@ jobs:
           node-version: "12.x"
       - name: Build and publish docker image
         if: github.ref == 'refs/heads/next'
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: vsf-next-demo-storefrontcloud-io/vue-storefront:${{ github.sha }}
           registry: registry.storefrontcloud.io
@@ -44,7 +44,7 @@ jobs:
           buildoptions: "--compress"
       - name: Build and publish docker image for Shopify
         if: github.ref == 'refs/heads/next'
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: shopify-demo-storefrontcloud-io/vue-storefront:${{ github.sha }}
           registry: registry.storefrontcloud.io
